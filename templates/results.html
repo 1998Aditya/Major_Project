@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Results</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="text-center">Results</h1>
+      <div class="card mb-4">
+        <div class="card-header">
+          <h2>Logistic Regression</h2>
+        </div>
+        <div class="card-body">
+          <p><strong>Train Accuracy:</strong> {{ results['logistic_regression']['train_accuracy'] }}</p>
+          <p><strong>Test Accuracy:</strong> {{ results['logistic_regression']['test_accuracy'] }}</p>
+          <p><strong>Train F1 Score:</strong> {{ results['logistic_regression']['train_f1'] }}</p>
+          <p><strong>Test F1 Score:</strong> {{ results['logistic_regression']['test_f1'] }}</p>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <div class="card-header">
+          <h2>Decision Tree</h2>
+        </div>
+        <div class="card-body">
+          <p><strong>Train Accuracy:</strong> {{ results['decision_tree']['train_accuracy'] }}</p>
+          <p><strong>Test Accuracy:</strong> {{ results['decision_tree']['test_accuracy'] }}</p>
+          <p><strong>Train F1 Score:</strong> {{ results['decision_tree']['train_f1'] }}</p>
+          <p><strong>Test F1 Score:</strong> {{ results['decision_tree']['test_f1'] }}</p>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <div class="card-header">
+          <h2>Random Forest</h2>
+        </div>
+        <div class="card-body">
+          <p><strong>Train Accuracy:</strong> {{ results['random_forest']['train_accuracy'] }}</p>
+          <p><strong>Test Accuracy:</strong> {{ results['random_forest']['test_accuracy'] }}</p>
+          <p><strong>Train F1 Score:</strong> {{ results['random_forest']['train_f1'] }}</p>
+          <p><strong>Test F1 Score:</strong> {{ results['random_forest']['test_f1'] }}</p>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <div class="card-header">
+          <h2>Random Forest Confusion Matrix</h2>
+        </div>
+        <div class="card-body">
+          <pre>{{ results['random_forest_confusion_matrix'] }}</pre>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <div class="card-header">
+          <h2>Random Forest Classification Report</h2>
+        </div>
+        <div class="card-body">
+          <pre>{{ results['random_forest_classification_report'] }}</pre>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
